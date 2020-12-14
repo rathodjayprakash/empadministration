@@ -1,0 +1,115 @@
+
+plugin.tx_empadministration_empadministration {
+    view {
+        templateRootPaths.0 = EXT:empadministration/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_empadministration_empadministration.view.templateRootPath}
+        partialRootPaths.0 = EXT:empadministration/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_empadministration_empadministration.view.partialRootPath}
+        layoutRootPaths.0 = EXT:empadministration/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_empadministration_empadministration.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_empadministration_empadministration.persistence.storagePid}
+        #recursive = 1
+    }
+    settings {
+        employeeGroupUid = {$plugin.tx_empadministration_empadministration.settings.employeeGroupUid}
+        officePid = {$plugin.tx_empadministration_empadministration.settings.officePid}
+        departmentPid = {$plugin.tx_empadministration_empadministration.settings.departmentPid}
+        employeePid = {$plugin.tx_empadministration_empadministration.settings.employeePid}
+        projectPid = {$plugin.tx_empadministration_empadministration.settings.projectPid}
+        myinfoPid = {$plugin.tx_empadministration_empadministration.settings.myinfoPid}
+        projecthrsPid = {$plugin.tx_empadministration_empadministration.settings.projecthrsPid}
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+        # Should be on by default, but can be disabled if all action in the plugin are uncached
+        requireCHashArgumentForActionArguments = 1
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}
+
+# these classes are only used in auto-generated templates
+plugin.tx_empadministration._CSS_DEFAULT_STYLE (
+    textarea.f3-form-error {
+        background-color:#FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+
+    input.f3-form-error {
+        background-color:#FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+
+    .tx-empadministration table {
+        border-collapse:separate;
+        border-spacing:10px;
+    }
+
+    .tx-empadministration table th {
+        font-weight:bold;
+    }
+
+    .tx-empadministration table td {
+        vertical-align:top;
+    }
+
+    .typo3-messages .message-error {
+        color:red;
+    }
+
+    .typo3-messages .message-ok {
+        color:green;
+    }
+)
+
+
+page {
+    includeCSSLibs {
+        googlewebfont = https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap
+        googlewebfont {
+            external = 1
+            disableCompression = 1
+            excludeFromConcatenation = 1
+        }
+        fontawesomeIcons = EXT:empadministration/Resources/Public/Styles/fontawesome.min.css
+        t3styles = EXT:empadministration/Resources/Public/Styles/t3styles.css
+        datetimepicker = EXT:empadministration/Resources/Public/Styles/bootstrap-datetimepicker.min.css
+    }
+
+    includeCSS {
+        bootstrapIcons = EXT:empadministration/Resources/Public/Styles/bootstrap-icons.css
+        customStyles = EXT:empadministration/Resources/Public/Styles/app-style.css
+    }
+    
+    includeJSLibs {
+        modernizr >
+    }
+
+    includeJSFooterlibs {
+        #### Contrib
+        jquery >
+        jquery.forceOnTop >
+        hammerjs >
+        photoswipe_core >
+        photoswipe_ui >
+
+        #### Custom Modules
+        bootstrap_accordion >
+        bootstrap_form >
+        bootstrap_swipe >
+        bootstrap_popover >
+        bootstrap_stickyheader >
+        bootstrap_smoothscroll >
+        bootstrap_lightbox >
+        bootstrap_navbar >
+    }
+    includeJSFooterlibs {
+        popper >
+        bootstrap >
+    }
+}

@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<label for="name">
+	<f:translate key="tx_empadministration_domain_model_employee.name" /> <span class="required">(required)</span>
+</label><br />
+<f:form.textfield class="form-control" property="name" required="required" /><br />
+<label for="email">
+	<f:translate key="tx_empadministration_domain_model_employee.email" />
+</label><br />
+<f:if condition="{employee.email}">
+	<f:then>
+		<f:form.textfield class="form-control" type="email" property="email" disabled="true" /><br />
+	</f:then>
+	<f:else>
+		<f:form.textfield class="form-control" type="email" property="email" /><br />
+	</f:else>
+</f:if>
+<label for="phoneNumber">
+	<f:translate key="tx_empadministration_domain_model_employee.phone_number" />
+</label><br />
+<f:form.textfield class="form-control" property="phoneNumber" /><br />
+<label for="password">
+	<f:translate key="tx_empadministration_domain_model_employee.password" />
+</label><br />
+<f:if condition="{employee.email}">
+	<f:then>
+		<f:form.password class="form-control" property="password" value="" /><br />
+	</f:then>
+	<f:else>
+		<f:form.password class="form-control" property="password" additionalAttributes="{required:'required'}" /><br />
+	</f:else>
+</f:if>
+
+</html>

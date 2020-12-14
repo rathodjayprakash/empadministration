@@ -1,0 +1,12 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<label for="name">
+	<f:translate key="tx_empadministration_domain_model_project.name" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield class="form-control" property="name" required="required" /><br />
+
+<label for="employee">
+	Select Employee
+</label> <br />
+<f:form.select class="form-control" property="employees" options="{department.employees}" multiple="1" optionLabelField="name" optionValueField="uid" />
+
+</html>

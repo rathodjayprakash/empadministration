@@ -1,0 +1,62 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+    <h1>Listing for Employee</h1>
+    <f:if condition="{settings2.employeeGroupUid} != {userinfo.usergroup}">
+        <f:link.action action="new" class="btn btn-primary mb-3 float-right">+ Employee</f:link.action>
+    </f:if>
+    <f:flashMessages />
+    <table  class="table table-striped table-hover mt-3">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th><f:translate key="tx_empadministration_domain_model_employee.name" /></th>
+                <th><f:translate key="tx_empadministration_domain_model_employee.email" /></th>
+                <th><f:translate key="tx_empadministration_domain_model_employee.phone_number" /></th>
+                <th>Projects</th>
+                <th> </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <f:for each="{employees}" as="employee">
+                <tr>
+                    <td>{employee.uid}</td>
+                    <td>{employee.name}</td>
+                    <td>{employee.email}</td>
+                    <td>{employee.phoneNumber}</td>
+                    <td>
+                        <f:for each="{projects.{employee.uid}}" as="project" iteration="i" key="key">
+                            #{project.uid} : {project.name} {f:if(condition: '!{i.isLast}', then: '<br/>')}
+                        </f:for>
+                    </td>
+                    <td align="right">
+                        <f:link.action action="show" title="show" arguments="{employee : employee}" class="btn btn-warning mr-2"><i class="bi bi-search"></i></f:link.action>
+                        <f:if condition="{employee.email} == {userinfo.email}">
+                            <f:link.action action="edit" noCache="1" title="edit" arguments="{employee : employee}" class="btn btn-info mr-2"><i class="bi bi-pencil"></i></f:link.action>
+                        </f:if>
+                        
+                        <f:if condition="{settings2.employeeGroupUid} != {userinfo.usergroup}">
+                            <f:link.action action="edit" noCache="1" title="edit" arguments="{employee : employee}" class="btn btn-info mr-2"><i class="bi bi-pencil"></i></f:link.action>
+                            <f:link.action action="delete" title="delete" arguments="{employee : employee}" class="btn btn-danger mr-2"><i class="bi bi-trash"></i></f:link.action>
+                        </f:if>
+                    </td>
+                </tr>
+            </f:for>
+        </tbody>
+    </table>
+
+</f:section>
+</html>

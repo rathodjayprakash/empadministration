@@ -1,0 +1,34 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<label for="name">
+	<f:translate key="tx_empadministration_domain_model_department.name" /> <span class="required">(required)</span>
+</label><br />
+<f:form.textfield class="form-control" property="name" required="required" /><br />
+
+<label for="departments">
+	Available employees
+</label> <br />
+<f:form.select property="employees" class="form-control" multiple="1">
+	<f:for each="{selectedemployees}" as="slectedEmployee" iteration="is">
+		<f:form.select.option value="{slectedEmployee.uid}" selected="selected">{slectedEmployee.name}</f:form.select.option>
+	</f:for>
+	<f:for each="{employees}" as="employee" iteration="i">
+		<f:form.select.option value="{employee.uid}">{employee.name}</f:form.select.option>
+	</f:for>
+</f:form.select>	
+
+<br />
+
+<label for="projects">
+	Available projects
+</label> <br />
+<f:form.select property="projects" class="form-control" multiple="1">
+	<f:for each="{selectedprojects}" as="selectedProject" iteration="is">
+		<f:form.select.option value="{selectedProject.uid}" selected="selected">{selectedProject.name}</f:form.select.option>
+	</f:for>
+	
+	<f:for each="{projects}" as="project" iteration="i">
+		<f:form.select.option value="{project.uid}">{project.name}</f:form.select.option>
+	</f:for>
+</f:form.select>
+<br />
+</html>

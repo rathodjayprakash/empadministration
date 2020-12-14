@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This template displays a NEW form for the current domain object.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+New.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+  <h1 class="mb-5">New Office</h1>
+  <f:flashMessages />
+  <f:render partial="FormErrors" />
+  <f:if condition="{departments}">
+    <f:then>
+      <f:form action="create" name="newOffice" object="{newOffice}">
+        <div class="row">
+          <div class="col-md-8 col-sm-8 col-xs-12">
+           <f:render partial="Office/FormFields" arguments="{_all}" />
+          </div>
+        </div>
+        <div class="action-buttons mt-5 mb-5">
+          <f:link.action action="list" class="btn btn-info mr-3" title="cancel"><i class="bi bi-arrow-left"></i> Cancel</f:link.action>
+          <button type="submit" class="btn btn-success mr-3" title="save"><i class="bi bi-check2"></i> Save</button>
+        </div>
+      </f:form>
+    </f:then>
+    <f:else>
+      <p class="alert alert-info">Please add <b>Departments</b> !</p>
+    </f:else>
+  </f:if>
+
+  <f:link.action action="new" class="btn btn-primary mb-5" controller="Department" pageUid="{settings.departmentPid}" arguments="{from: 'Office', to: 'new', pid: settings.officePid}">+ Department</f:link.action>
+
+</f:section>
+
+</html>

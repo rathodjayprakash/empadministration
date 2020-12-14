@@ -1,0 +1,38 @@
+
+plugin.tx_empadministration_empadministration {
+    view {
+        # cat=plugin.tx_empadministration_empadministration/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:empadministration/Resources/Private/Templates/
+        # cat=plugin.tx_empadministration_empadministration/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:empadministration/Resources/Private/Partials/
+        # cat=plugin.tx_empadministration_empadministration/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:empadministration/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_empadministration_empadministration//a; type=string; label=Default storage PID
+        storagePid =
+    }
+
+    settings {
+        # cat=plugin.tx_empadministration_empadministration//a; type=string; label=Employee Usergroup UID
+        employeeGroupUid =
+
+        # cat=plugin.tx_empadministration_empadministration//a; type=string; label=Office PID
+        officePid =
+
+        # cat=plugin.tx_empadministration_empadministration//a; type=string; label=Department PID
+        departmentPid =
+
+        # cat=plugin.tx_empadministration_empadministration//a; type=string; label=Employee PID
+        employeePid =
+
+        # cat=plugin.tx_empadministration_empadministration//a; type=string; label=Project PID
+        projectPid =
+
+        # cat=plugin.tx_empadministration_empadministration//a; type=string; label=Employee info PID
+        myinfoPid =
+
+        # cat=plugin.tx_empadministration_empadministration//a; type=string; label=Project Hours PID
+        projecthrsPid =
+    }
+}

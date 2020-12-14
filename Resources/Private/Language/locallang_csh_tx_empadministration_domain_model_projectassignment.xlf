@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:empadministration/Resources/Private/Language/locallang_csh" date="2020-12-12T08:57:11Z" product-name="empadministration">
+		<header/>
+		<body>
+			<trans-unit id="hours_from.description" resname="hours_from.description">
+				<source>hoursFrom</source>
+			</trans-unit>
+			<trans-unit id="hours_to.description" resname="hours_to.description">
+				<source>hoursTo</source>
+			</trans-unit>
+			<trans-unit id="task_info.description" resname="task_info.description">
+				<source>taskInfo</source>
+			</trans-unit>
+			<trans-unit id="project.description" resname="project.description">
+				<source>On which project worked ?</source>
+			</trans-unit>
+			<trans-unit id="employee.description" resname="employee.description">
+				<source>Who &amp;amp; How much worked ?</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

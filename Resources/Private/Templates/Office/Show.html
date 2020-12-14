@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+  <h1 class="mb-5">{office.name}</h1>
+  <f:flashMessages />
+
+  <f:comment><f:render partial="Office/Properties" arguments="{office:office}" /></f:comment>
+
+  <div class="row mb-5">
+    <f:if condition="{office.departments}">
+      <div class="col-md-12">
+        <p class="text-primary h4 mb-4">
+            We have {office.departments -> f:count()} Department(s).
+        </p>
+        <!-- Getting department list -->
+        <f:render partial="Department/List" arguments="{office:office, userinfo: userinfo, settings2: settings2}" />
+      </div>
+    </f:if>
+  </div>
+  
+  <f:link.action action="list" class="btn btn-info mr-3" title="back"><i class="bi bi-arrow-left"></i> Back</f:link.action>
+</f:section>
+
+</html>

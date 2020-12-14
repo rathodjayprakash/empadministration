@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:empadministration/Resources/Private/Language/locallang_csh" date="2020-12-12T08:57:11Z" product-name="empadministration">
+		<header/>
+		<body>
+			<trans-unit id="name.description" resname="name.description">
+				<source>Office name</source>
+			</trans-unit>
+			<trans-unit id="address.description" resname="address.description">
+				<source>Company full address</source>
+			</trans-unit>
+			<trans-unit id="contact_details.description" resname="contact_details.description">
+				<source>Contact details for Company</source>
+			</trans-unit>
+			<trans-unit id="departments.description" resname="departments.description">
+				<source>An office can have several departments</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,55 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This template displays a NEW form for the current domain object.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+New.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+  <h1 class="mb-5">New Project</h1>
+  <f:flashMessages />
+  <f:render partial="FormErrors" />
+  <f:if condition="!{employees}">
+    <f:then>
+      <p class="alert alert-info">Please add <b>Employees</b> !</p>
+    </f:then>
+    <f:else>
+      <f:form action="create" name="newProject" object="{newProject}">
+        <div class="row">
+          <div class="col-md-8 col-sm-8 col-xs-12">
+            <f:render partial="Project/FormFields" arguments="{_all}" />
+          </div>
+        </div>
+
+        <div class="action-buttons mt-5 mb-5">
+          <f:if condition="{requestdata.from}">
+            <f:then>
+              <f:form.hidden name="redirectfrom" value="{requestdata.from}" />
+              <f:form.hidden name="redirectto" value="{requestdata.to}" />
+              <f:form.hidden name="redirectpid" value="{requestdata.pid}" />
+              <f:link.action action="{requestdata.to}" controller="{requestdata.from}" pageUid="{requestdata.pid}" class="btn btn-info mr-3"><i class="bi bi-arrow-left"></i> Cancel</f:link.action>
+            </f:then>
+            <f:else>
+              <f:link.action action="list" class="btn btn-info mr-3" title="cancel"><i class="bi bi-arrow-left"></i> Cancel</f:link.action>
+            </f:else>
+          </f:if>
+
+          <button type="submit" class="btn btn-success mr-3" title="save"><i class="bi bi-check2"></i> Save</button>
+        </div>
+      </f:form>
+    </f:else>
+  </f:if>
+
+  <f:link.action action="new" class="btn btn-primary mr-3" controller="Employee" pageUid="{settings2.employeePid}" arguments="{from: 'Project', to: 'new', pid: settings2.projectPid}">+ Employee</f:link.action>
+  <f:debug>{_all}</f:debug>
+
+</f:section>
+
+</html>

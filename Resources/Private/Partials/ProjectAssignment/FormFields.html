@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<label for="hoursFrom">
+	<f:translate key="tx_empadministration_domain_model_projectassignment.hours_from" />
+</label><br />
+<f:form.textfield class="form-control datetimepicker readonly" property="hoursFrom" value="{projectAssignment.hoursFrom->f:format.date()}" required="required" /><br />
+<label for="hoursTo">
+	<f:translate key="tx_empadministration_domain_model_projectassignment.hours_to" />
+</label><br />
+<f:form.textfield class="form-control datetimepicker readonly" property="hoursTo" value="{projectAssignment.hoursTo->f:format.date()}" required="required" /><br />
+<label for="taskInfo">
+	<f:translate key="tx_empadministration_domain_model_projectassignment.task_info" />
+</label><br />
+<f:form.textarea class="form-control" property="taskInfo" cols="40" rows="3" required="required" /><br />
+
+<f:form.hidden property="project" value="{requestdata.projectid}" />
+<f:form.hidden property="employee" value="{employee.uid}" />
+</html>

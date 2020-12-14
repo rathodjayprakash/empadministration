@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<label for="name">
+	<f:translate key="tx_empadministration_domain_model_office.name" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield class="form-control" property="name" required="required" /><br />
+
+<label for="address">
+	<f:translate key="tx_empadministration_domain_model_office.address" />
+</label><br />
+	<f:form.textarea class="form-control" property="address" cols="40" rows="3" /><br />
+
+<label for="contactDetails">
+	<f:translate key="tx_empadministration_domain_model_office.contact_details" />
+</label><br />
+	<f:form.textarea class="form-control"  property="contactDetails" cols="40" rows="3" /><br />
+
+<label for="departments">
+	Select Departments (required)
+</label> <br/>
+	<f:form.select class="form-control" property="departments" options="{departments}" multiple="1" optionLabelField="name" optionValueField="uid" required="required" />
+	<br/>
+</html>

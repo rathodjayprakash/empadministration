@@ -1,0 +1,28 @@
+{
+    "name": "ms/empadministration",
+    "type": "typo3-cms-extension",
+    "description": "An employee administration for the personnel department of a company is desired.",
+    "authors": [
+        {
+            "name": "Jayprakash",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ms\\Empadministration\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ms\\Empadministration\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "ms/empadministration": "self.version",
+        "typo3-ter/empadministration": "self.version"
+    }
+}

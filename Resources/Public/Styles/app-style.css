@@ -1,0 +1,20 @@
+.btn {
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px #908e8e;
+}
+.form-control {
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px #dedede;
+}
+ul.typo3-messages {
+    display: inline-block;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+ul.typo3-messages p {
+    margin: 0;
+}
+select option[disabled='true'] {
+    background: #dedbdb;
+}

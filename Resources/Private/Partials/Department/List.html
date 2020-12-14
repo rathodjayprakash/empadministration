@@ -1,0 +1,49 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="accordion" id="department-accordion">
+    <f:for each="{office.departments}" as="department" iteration="i">
+        <div class="accordion-item">
+            <div class="accordion-item card">
+                <div class="accordion-header card-header" id="department-accordion-heading-{i.cycle}">
+                    <a href="#department-accordion-{i.cycle}" class="accordion-title-link collapsed text-dark" data-toggle="collapse" data-parent="#department-accordion" aria-expanded="false" aria-controls="department-accordion-{i.cycle}">
+                        <span class="accordion-title-link-text h3">
+                           {department.name}
+                        </span>
+                        <span class="accordion-title-link-state"></span>
+                    </a>
+                </div>
+                <div id="department-accordion-{i.cycle}" class="accordion-collapse collapse"
+                    aria-labelledby="department-accordion-heading-{i.cycle}" data-parent="#department-accordion" style="">
+                    <div class="accordion-body card-body">
+                        <div class="accordion-content accordion-content-left">
+                            <div class="accordion-content-item accordion-content-text">
+                                <f:if condition="{department.employees}">
+                                    <f:then>
+                                        <f:render partial="Employee/List" arguments="{employees:department.employees, office: office, settings2: settings2}" />
+                                    </f:then>
+                                    <f:else>
+                                        <p class="alert alert-info">
+                                            No employees available for this department !
+                                        </p>
+                                    </f:else>
+                                </f:if>
+
+                                
+                                <f:if condition="{department.projects}">
+                                    <f:then>
+                                        <f:render partial="Project/List" arguments="{projects:department.projects, office: office, settings2: settings2}" />
+                                    </f:then>
+                                    <f:else>
+                                        <p class="alert alert-info">
+                                            No projects available for this department !
+                                        </p>
+                                    </f:else>
+                                </f:if>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </f:for>
+</div>
+</html>

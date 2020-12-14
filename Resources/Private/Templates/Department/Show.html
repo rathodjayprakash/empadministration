@@ -1,0 +1,43 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+  <h1 class="mb-5">{department.name}</h1>
+  <f:flashMessages />
+
+  <f:if condition="!{department.employees}">
+    <p class="alert alert-info">No <b>Employees</b> selected !</p>
+  </f:if>
+
+  <f:if condition="!{department.projects}">
+    <p class="alert alert-info">No <b>Projects</b> selected !</p>
+  </f:if>
+  
+  <f:if condition="{department.employees}">
+    <!-- Getting employees details -->
+    <f:render partial="Employee/List"
+      arguments="{employees:department.employees, department: department, settings2: settings2}" />
+  </f:if>
+
+  <f:if condition="{department.projects}">
+    <!-- Getting projects details -->
+    <f:render partial="Project/List"
+      arguments="{projects:department.projects, department: department, settings2: settings2}" />
+  </f:if>
+
+  <f:link.action action="list" class="btn btn-info mr-3" title="back"><i class="bi bi-arrow-left"></i> Back
+  </f:link.action>
+</f:section>
+
+</html>

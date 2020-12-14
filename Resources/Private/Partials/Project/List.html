@@ -1,0 +1,30 @@
+<div class="mb-5">
+    <p class="text-info h5">Total <b>{projects -> f:count()}</b> Project(s)</p>
+    <table  class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th><f:translate key="tx_empadministration_domain_model_project.name" /></th>
+                <th> </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <f:for each="{projects}" as="project">
+                <tr>
+                    <td>{project.uid}</td>
+                    <td>{project.name}</td>
+                    <td align="right">
+                        <f:if condition="{department}">
+                            <f:link.action action="show" title="show" controller="Project" arguments="{from: 'Department', to: 'show', pid: settings2.departmentPid, department: department, project : project}" pageUid="{settings2.projectPid}" class="btn btn-warning mr-2"><i class="bi bi-search"></i></f:link.action>
+                        </f:if>
+
+                        <f:if condition="{office}">
+                            <f:link.action action="show" title="show" controller="Project" arguments="{from: 'Office', to: 'show', pid: settings2.officePid, office: office, project : project}" pageUid="{settings2.projectPid}" class="btn btn-warning mr-2"><i class="bi bi-search"></i></f:link.action>
+                        </f:if>
+                    </td>
+                </tr>
+            </f:for>
+        </tbody>
+    </table>
+</div>

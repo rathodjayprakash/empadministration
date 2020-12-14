@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:empadministration/Resources/Private/Language/locallang_db" date="2020-12-12T08:57:11Z" product-name="empadministration">
+		<header/>
+		<body>
+			<trans-unit id="tx_empadministration_domain_model_office" resname="tx_empadministration_domain_model_office">
+				<source>Office</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_office.name" resname="tx_empadministration_domain_model_office.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_office.address" resname="tx_empadministration_domain_model_office.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_office.contact_details" resname="tx_empadministration_domain_model_office.contact_details">
+				<source>Contact Details</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_office.departments" resname="tx_empadministration_domain_model_office.departments">
+				<source>Departments</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_department" resname="tx_empadministration_domain_model_department">
+				<source>Department</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_department.name" resname="tx_empadministration_domain_model_department.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_department.projects" resname="tx_empadministration_domain_model_department.projects">
+				<source>Projects</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_department.employees" resname="tx_empadministration_domain_model_department.employees">
+				<source>Employees</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_employee" resname="tx_empadministration_domain_model_employee">
+				<source>Employee</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_employee.name" resname="tx_empadministration_domain_model_employee.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_employee.email" resname="tx_empadministration_domain_model_employee.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_employee.phone_number" resname="tx_empadministration_domain_model_employee.phone_number">
+				<source>Phone Number</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_employee.password" resname="tx_empadministration_domain_model_employee.password">
+				<source>Password</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_employee.position" resname="tx_empadministration_domain_model_employee.position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_employee.projects" resname="tx_empadministration_domain_model_employee.projects">
+				<source>Projects</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_project" resname="tx_empadministration_domain_model_project">
+				<source>Project</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_project.name" resname="tx_empadministration_domain_model_project.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_project.employees" resname="tx_empadministration_domain_model_project.employees">
+				<source>Employees</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_positions" resname="tx_empadministration_domain_model_positions">
+				<source>Positions</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_positions.title" resname="tx_empadministration_domain_model_positions.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_projectassignment" resname="tx_empadministration_domain_model_projectassignment">
+				<source>Project Assignment</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_projectassignment.hours_from" resname="tx_empadministration_domain_model_projectassignment.hours_from">
+				<source>Hours From</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_projectassignment.hours_to" resname="tx_empadministration_domain_model_projectassignment.hours_to">
+				<source>Hours To</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_projectassignment.task_info" resname="tx_empadministration_domain_model_projectassignment.task_info">
+				<source>Task Info</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_projectassignment.project" resname="tx_empadministration_domain_model_projectassignment.project">
+				<source>Project</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_domain_model_projectassignment.employee" resname="tx_empadministration_domain_model_projectassignment.employee">
+				<source>Employee</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_empadministration.name" resname="tx_empadministration_empadministration.name">
+				<source>Employee Administration</source>
+			</trans-unit>
+			<trans-unit id="tx_empadministration_empadministration.description" resname="tx_empadministration_empadministration.description">
+				<source></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

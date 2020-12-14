@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-empadministration" >
+	<tr>
+		<td>
+			<f:translate key="tx_empadministration_domain_model_projectassignment.hours_from" />
+		</td>
+		<td>
+		{projectAssignment.hoursFrom -> f:format.date()}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_empadministration_domain_model_projectassignment.hours_to" />
+		</td>
+		<td>
+		{projectAssignment.hoursTo -> f:format.date()}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_empadministration_domain_model_projectassignment.task_info" />
+		</td>
+		<td>
+		{projectAssignment.taskInfo}
+		</td>
+	</tr>
+</table>
+</html>
